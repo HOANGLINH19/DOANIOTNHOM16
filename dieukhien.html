@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="nhom161.css" />
+ <script type="javascript" src="nhom161.js"></script>
+ <link rel="stylesheet"   href="https://stackpath.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+  <title>NHOM 16 IOT</title>
+
+   <style>
+  .on-button {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+   
+  }
+  </style>
+  <style>
+  .off-button {
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .on-button1 {
+    background-color: rgb(0, 132, 49);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+    
+  }
+  </style>
+  <style>
+  .off-button1 {
+    background-color: rgb(0, 195, 255);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+  
+    
+  }
+</style>
+</head>
+
+<body>
+  
+  
+  <div id="header" >
+    
+      <div class="nav"  >
+        
+      <div class="container" >
+        
+  
+        <ul class="pull-left" style="padding-left: 0%;" >
+  
+          
+          <li><a href="index.html"><i class="fa-solid fa-house-user  " ></i> HOME</a></li>
+          <li><a href="index.html">GIỚI THIỆU</a></li>
+        </ul>
+        <ul class="pull-right" >
+          <li><a href="dieukhien.html">ĐIỀU KHIỂN</a></li>
+          <li><a href="thanhvien.html" >THÀNH VIÊN</a></li>
+          <li><a href="#footer">LIÊN HỆ <i class="fa-solid fa-id-card" ></i></a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="jumbotron">
+      <div id="black">
+      <video autoplay muted loop id="video-bg">
+
+         <source src="video/KÊNH.mp4" style="height: 10px;" type="video/mp4"
+
+         >
+      </video> 
+      </div>
+      
+      <div class="container" style="text-align: center; ">
+        <h1 style="font-size: 50px;">
+          <a href="https://www.ctu.edu.vn/" target="_blank"><img src="https://www.ctu.edu.vn/images/upload/logo.png"  width="100px" height="90px"  
+          
+          alt="Your logo if any or remove this section" /></a> TRUNG TÂM ĐIỀU KHIỂN TRẠM BƠM </h1>
+        <p style="text-align: center;">NHÓM 16</p>
+       
+      </div>
+    </div>
+  </div>
+  <div class="body">
+ 
+     <body>
+    
+      <!-- <h1 id="OUT_TEXT"></h1> -->
+      
+                                                    
+                             <h1 style="text-align: center";><i class="fa-solid fa-faucet-drip"></i> MỰC NƯỚC BÁO ĐỘNG(M):</h1>
+                             <h1 style="text-align: center"; id="SENSOR"> </h1> 
+                 
+                             
+                             <div id="wrapper1">
+                              <h11>CHẾ ĐỘ VẬN HÀNH</h11>
+                              <div id="prompt">
+                                <!-- <p id="OUT_TEXT"> </p> -->
+                                <button class = "on-button1" id= "onBtn" onclick="onFunction()">AUTOMA</button>
+                                <button class = "off-button1" id="offBtn" onclick="offFunction()">MANUAL</button>
+                              </div>
+                              <div id="options">
+                               
+                              </div>
+                            </div>
+      <!-- <button class = "on-button" id= "onBtn" onclick="onFunction()">automa</button>
+      <button class = "off-button" id="offBtn" onclick="offFunction()">manual</button> -->
+      <!-- <button class = "on-button" id= "onBtn" onclick="onFunction1()">DC1 ON</button>
+      <button class = "off-button" id="offBtn" onclick="offFunction1()">DC1 OFF</button>
+      <button class = "on-button" id= "onBtn" onclick="onFunction2()">DC2 ON</button>
+      <button class = "off-button" id="offBtn" onclick="offFunction2()">DC2 OFF</button> -->
+
+     
+<section class="container1">
+  <div class="left-half" >
+    <article>
+      <h1 style="color: white; text-align: center; font-family: 'Times New Roman', Times, serif;">TRẠM BƠM <br>TRƯỜNG BÁCH KHOA </h1>
+      <p>Khu 2, Trường Đại Học Cần Thơn </p>
+      <button class = "on-button" id= "onBtn" onclick="onFunction1()">DC1 ON</button>
+      <button class = "off-button" id="offBtn" onclick="offFunction1()">DC1 OFF</button>
+   
+      
+  <div class="perspective">
+    
+
+
+    <div class="tardis-wrap">
+    <div class="tardis">
+      <!-- start of side -->
+      <div class="side">
+        <div class="top-sign">
+          <div class="text">
+            <span class="left">POLICE</span>
+            <span class="tiny">PUBLIC CALL</span>
+            <span class="right">BOX</span>
+          </div>
+        </div>
+        <div class="door-frame">
+          <div class="door door-left">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="sign"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+          <div class="door door-right">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="door-inset c"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of side -->
+
+      <!-- start of side -->
+      <div class="side">
+        <div class="top-sign">
+          <div class="text">
+            <span class="left">POLICE</span>
+            <span class="tiny">PUBLIC CALL</span>
+            <span class="right">BOX</span>
+          </div>
+        </div>
+        <div class="door-frame">
+          <div class="door door-left">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="door-inset c"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+          <div class="door door-right">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="door-inset c"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of side -->
+
+      <!-- start of side -->
+      <div class="side">
+        <div class="top-sign">
+          <div class="text">
+            <span class="left">POLICE</span>
+            <span class="tiny">PUBLIC CALL</span>
+            <span class="right">BOX</span>
+          </div>
+        </div>
+        <div class="door-frame">
+          <div class="door door-left">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="door-inset c"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+          <div class="door door-right">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="door-inset c"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of side -->
+
+      <!-- start of side -->
+      <div class="side">
+        <div class="top-sign">
+          <div class="text">
+            <span class="left">POLICE</span>
+            <span class="tiny">PUBLIC CALL</span>
+            <span class="right">BOX</span>
+          </div>
+        </div>
+        <div class="door-frame">
+          <div class="door door-left">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="door-inset c"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+          <div class="door door-right">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="door-inset c"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of side -->
+
+      <div class="roof"></div>
+
+
+      <div class="roof-top">
+        <div class="roof-panel a"></div>
+        <div class="roof-panel b"></div>
+        <div class="roof-panel c"></div>
+        <div class="roof-panel d"></div>
+        <div class="top-lid"></div>
+      </div>
+
+
+      <div class="light">
+        <div class="light-panel a"><div class="bottom"></div><div class="top"></div></div>
+        <div class="light-panel b"><div class="bottom"></div><div class="top"></div></div>
+        <div class="light-panel c"><div class="bottom"></div><div class="top"></div></div>
+        <div class="light-panel d"><div class="bottom"></div><div class="top"></div></div>
+        <div class="light-lid"></div>
+      </div>
+
+
+      <!-- start of floor -->
+      <div class="floor">
+        <div class="floor-panel a"></div>
+        <div class="floor-panel b"></div>
+        <div class="floor-panel c"></div>
+        <div class="floor-panel d"></div>
+        <div class="floor-lid"></div>
+      </div>
+      <!-- end of floor -->
+
+
+    </div>
+    </div>
+
+
+  </div>
+    </article>
+  </div>
+  <div class="right-half">
+    <article>
+      <h1 style="color: white; text-align: center; font-family: 'Times New Roman', Times, serif;"  >TRẠM BƠM <br> KHOA KHOA HỌC XH VÀ NV</h1>
+      <p>Khu 2, Trường Đại Học Cần Thơ</p>
+         <button class = "on-button" id= "onBtn" onclick="onFunction2()">DC2 ON</button>
+      <button class = "off-button" id="offBtn" onclick="offFunction2()">DC2 OFF</button>
+     
+  <div class="perspective">
+    
+
+
+    <div class="tardis-wrap">
+    <div class="tardis">
+      <!-- start of side -->
+      <div class="side">
+        <div class="top-sign">
+          <div class="text">
+            <span class="left">TRƯỜNG </span>
+            <span class="tiny"></span>
+            <span class="right">BÁCH KHOA</span>
+          </div>
+        </div>
+        <div class="door-frame">
+          <div class="door door-left">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="sign"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+          <div class="door door-right">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="door-inset c"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of side -->
+
+      <!-- start of side -->
+      <div class="side">
+        <div class="top-sign">
+          <div class="text">
+            <span class="left">TRƯỜNG</span>
+            <span class="tiny">PUBLIC CALL</span>
+            <span class="right">KHXH & NV</span>
+          </div>
+        </div>
+        <div class="door-frame">
+          <div class="door door-left">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="door-inset c"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+          <div class="door door-right">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="door-inset c"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of side -->
+
+      <!-- start of side -->
+      <div class="side">
+        <div class="top-sign">
+          <div class="text">
+            <span class="left">TRƯỜNG KT</span>
+            <span class="tiny"></span>
+            <span class="right"></span>
+          </div>
+        </div>
+        <div class="door-frame">
+          <div class="door door-left">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="door-inset c"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+          <div class="door door-right">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="door-inset c"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of side -->
+
+      <!-- start of side -->
+      <div class="side">
+        <div class="top-sign">
+          <div class="text">
+            <span class="left">POLICE</span>
+            <span class="tiny">PUBLIC CALL</span>
+            <span class="right">BOX</span>
+          </div>
+        </div>
+        <div class="door-frame">
+          <div class="door door-left">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="door-inset c"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+          <div class="door door-right">
+            <div class="door-inset"></div>
+            <div class="door-inset b"></div>
+            <div class="door-inset c"></div>
+            <div class="window">
+              <div class="pane a"></div><div class="pane b"></div><div class="pane c"></div>
+              <div class="pane d"></div><div class="pane e"></div><div class="pane f"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of side -->
+
+      <div class="roof"></div>
+
+
+      <div class="roof-top">
+        <div class="roof-panel a"></div>
+        <div class="roof-panel b"></div>
+        <div class="roof-panel c"></div>
+        <div class="roof-panel d"></div>
+        <div class="top-lid"></div>
+      </div>
+
+
+      <div class="light">
+        <div class="light-panel a"><div class="bottom"></div><div class="top"></div></div>
+        <div class="light-panel b"><div class="bottom"></div><div class="top"></div></div>
+        <div class="light-panel c"><div class="bottom"></div><div class="top"></div></div>
+        <div class="light-panel d"><div class="bottom"></div><div class="top"></div></div>
+        <div class="light-lid"></div>
+      </div>
+
+
+      <!-- start of floor -->
+      <div class="floor">
+        <div class="floor-panel a"></div>
+        <div class="floor-panel b"></div>
+        <div class="floor-panel c"></div>
+        <div class="floor-panel d"></div>
+        <div class="floor-lid"></div>
+      </div>
+      <!-- end of floor -->
+
+
+    </div>
+    </div>
+
+
+  </div>
+    </article>
+  </div>
+</section>
+
+
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+     <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>       <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+
+     <script>
+       // Your web app's Firebase configuration
+       var firebaseConfig = {
+           apiKey: "AIzaSyBTKk1YtVldPI0afg5dxvCrJc9Aa7CY9jo",
+  authDomain: "led1-d3af5.firebaseapp.com",
+  databaseURL: "https://led1-d3af5-default-rtdb.firebaseio.com",
+  projectId: "led1-d3af5",
+  storageBucket: "led1-d3af5.appspot.com",
+  messagingSenderId: "719406936271",
+  appId: "1:719406936271:web:b1d2518221e7d8d4bb07ba",
+  measurementId: "G-FGKN2Y37FB"
+       };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+
+
+      var SENSOR = document.getElementById('SENSOR');
+      var dbRef5 = firebase.database().ref().child('SENSOR');
+      dbRef5.on('value', snap => SENSOR.innerText = snap.val());
+      </script>
+
+      <script>
+        // getting the text value from the database
+        var automa = document.getElementById('ON_BUTTON');
+        var manual = document.getElementById('OFF_BUTTON');
+
+        var dbRef = firebase.database().ref().child('chedo');
+
+
+        var dc1_one = document.getElementById('ON_BUTTON');
+        var dc1_off = document.getElementById('OFF_BUTTON');
+
+        var dbRef1 = firebase.database().ref().child('dc1');
+
+        var dc2_one = document.getElementById('ON_BUTTON');
+        var dc2_off = document.getElementById('OFF_BUTTON');
+
+        var dbRef2 = firebase.database().ref().child('dc2');
+
+             
+
+
+        // ON 버턴 클릭하여 DB 값 true 설정
+        function onFunction() {
+            dbRef.set('automa')
+          
+
+        }
+
+          // OFF 버튼 클릭하여 DB 값 false 설정
+        function offFunction() {
+            dbRef.set('manual')
+          
+        }
+          function onFunction1() {
+          
+            dbRef1.set('ON')
+            
+         
+
+        }
+
+          // OFF 버튼 클릭하여 DB 값 false 설정
+        function offFunction1() {
+        
+            dbRef1.set('OFF')
+         
+        }
+          function onFunction2() {
+            
+            dbRef2.set('ON')
+
+        }
+
+          // OFF 버튼 클릭하여 DB 값 false 설정
+        function offFunction2() {
+          
+            dbRef2.set('OFF')
+        }
+
+        // 현재 상태의 database 값 읽어오기
+        dbRef.on("value", function(snapshot) {
+
+          if (snapshot.val() == 'ON') {
+            OUT_TEXT.innerText = 'automa';
+            
+            
+            
+          } else if (snapshot.val() == 'OFF'){
+            OUT_TEXT.innerText = 'manual';
+          }
+
+        }, function (error) {
+          console.log("Error: " + error.code);
+        });
+        dbRef1.on("value", function(snapshot) {
+
+          if (snapshot.val() == 'ON') {
+            OUT_TEXT.innerText = 'dc1 ON';
+          } else if (snapshot.val() == 'OFF'){
+            OUT_TEXT.innerText = 'dc1 OFF';
+          }
+
+        }, function (error) {
+          console.log("Error: " + error.code);
+        });
+        dbRe2.on("value", function(snapshot) {
+
+          if (snapshot.val() == 'ON') {
+            OUT_TEXT.innerText = 'dc2  ON';
+          } else if (snapshot.val() == 'OFF'){
+            OUT_TEXT.innerText = 'dc2 OFF';
+          }
+
+        }, function (error) {
+          console.log("Error: " + error.code);
+        });
+
+
+
+
+         
+    
+      </script>
+    
+    <!-- ------------------------------------ -->
+
+  
+</div>
+  <footer class="new_footer_area bg_color" id="footer" >
+    <div class="new_footer_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">ĐỒ ÁN IOT NHÓM 16</h3>
+                        <p > Ở đây chúng tôi cung cấp cho bạn những thông tin chi tiết về hệ thống cảm biến IoT được sử dụng trong các thành phố để cảnh báo lũ lụt. Bên cạnh đó là cách thức hoạt động của chúng, cách triển khai và những thách thức khi đưa vào sử dụng.</p>
+                       
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">ĐỊA CHỈ</h3>
+                        <p>Khu II, Đ. 3/2, Xuân Khánh, Ninh Kiều, Cần Thơ</p>
+                        <ul class="list-unstyled f_list">
+                            <li><a href="https://www.ctu.edu.vn/" target="_blank">WEBSITE</a></li>
+          
+                        </ul>
+                    </div>
+                </div>
+                <div   class="col-lg-3 col-md-6" >
+                    <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">HOT LINE</h3>
+                        <p> 09890793XX</p>
+                        <p> MAIL: CTUxx@gmail.com</p>
+                        <ul class="list-unstyled f_list">
+                  
+                            <li><a href="https://www.facebook.com/hoanglinhh19/" target="_blank">HOANG LINH</a></li>
+                           
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                        <h3 class="f-title f_600 t_color f_size_18">LIÊN HỆ</h3>
+                        <div class="f_social_icon" style="text-align: center; text-decoration: none ;" >
+                            <a href="https://www.facebook.com/hoanglinhh19/" target="_blank" class="fab fa-facebook"></a>
+                            <a href="https://www.youtube.com/" target="_blank" class="fa-brands fa-youtube"></a>
+                            <a href="https://www.instagram.com/" target="_blank" class="fa-brands fa-instagram"></a>
+                            <a href="#"  class="fa-regular fa-envelope" target="_blank"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bg">
+            <div class="footer_bg_one"></div>
+            <div class="footer_bg_two"></div>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-sm-7">
+                    <p class="mb-0 f_400">© Đồ án của nhóm 16 2022</p>
+                </div>
+                <div class="col-lg-6 col-sm-5 text-right">
+                    <p>  <i class="icon_heart"></i><a href="https://www.facebook.com/hoanglinhh19/" target="_blank">NHOM16</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+
+</body>
+<script src="nhom161.js"></script>
+
+</html>
